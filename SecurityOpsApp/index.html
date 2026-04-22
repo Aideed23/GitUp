@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecurityOps Staff Console</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>SecurityOps Staff Console</h1>
+      <p>Daily operations for security teams: shifts, patrols, incidents, and check-ins.</p>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Staff Check-In / Check-Out</h2>
+        <form id="checkinForm" class="form-inline">
+          <input id="staffName" type="text" placeholder="Staff name" required />
+          <select id="status" required>
+            <option value="On Duty">On Duty</option>
+            <option value="Off Duty">Off Duty</option>
+            <option value="Break">Break</option>
+          </select>
+          <button type="submit">Log Status</button>
+        </form>
+        <ul id="checkinList" class="list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Shift Assignment</h2>
+        <form id="shiftForm" class="form-stack">
+          <input id="shiftStaff" type="text" placeholder="Staff name" required />
+          <input id="shiftLocation" type="text" placeholder="Site / location" required />
+          <input id="shiftStart" type="time" required />
+          <input id="shiftEnd" type="time" required />
+          <button type="submit">Assign Shift</button>
+        </form>
+        <ul id="shiftList" class="list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Patrol Tasks</h2>
+        <form id="patrolForm" class="form-stack">
+          <input id="patrolArea" type="text" placeholder="Patrol area" required />
+          <input id="patrolAssignee" type="text" placeholder="Assigned officer" required />
+          <input id="patrolDue" type="datetime-local" required />
+          <button type="submit">Create Patrol Task</button>
+        </form>
+        <ul id="patrolList" class="list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Incident Reporting</h2>
+        <form id="incidentForm" class="form-stack">
+          <input id="incidentLocation" type="text" placeholder="Location" required />
+          <select id="incidentSeverity" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Critical">Critical</option>
+          </select>
+          <textarea id="incidentDescription" rows="3" placeholder="Describe what happened" required></textarea>
+          <button type="submit">Report Incident</button>
+        </form>
+        <ul id="incidentList" class="list"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <button id="clearData" class="danger">Clear Local Demo Data</button>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
