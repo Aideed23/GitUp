@@ -9,14 +9,28 @@ A lightweight front-end app for security companies to manage day-to-day staff op
 - Incident reporting with severity and details.
 - Local persistence using browser `localStorage`.
 
-## Run locally
-```bash
-cd SecurityOpsApp
-python3 -m http.server 8080
-```
-Then open `http://localhost:8080`.
+## Run locally (recommended)
+From the repository root:
 
-## Notes
+```bash
+python3 SecurityOpsApp/server.py
+```
+
+Or:
+
+```bash
+./SecurityOpsApp/run.sh
+```
+
+Then open:
+- `http://127.0.0.1:8080/`
+
+## Why you saw "Directory listing for /"
+That happens when a web server is started in the wrong folder (for example `/`) and no `index.html` exists there.
+
+This repo now includes `SecurityOpsApp/server.py`, which always serves the correct app directory no matter where you run it from.
+
+## Notes for production
 This is a starter demo for operations workflows. For production use, add:
 - Authentication and role-based access control.
 - Server-side API and database persistence.
