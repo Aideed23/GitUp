@@ -1,76 +1,63 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SecurityOps Staff Console</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <h1>SecurityOps Staff Console</h1>
-      <p>Daily operations for security teams: shifts, patrols, incidents, and check-ins.</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yellow Star Express Taxi | Taxi & NEMT Transportation</title>
+  <meta name="description" content="Professional taxi and emerging NEMT transportation services focused on reliability, safety, punctuality, and patient-centered care." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><strong>Yellow Star Express Taxi</strong><span>Taxi Service + NEMT Transition</span></a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Open menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="nemt.html">NEMT Readiness</a></li><li><a href="taxi.html">Taxi Service</a></li><li><a href="booking.html">Book a Ride</a></li><li><a href="partners.html">Partners</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <main class="grid">
-      <section class="card">
-        <h2>Staff Check-In / Check-Out</h2>
-        <form id="checkinForm" class="form-inline">
-          <input id="staffName" type="text" placeholder="Staff name" required />
-          <select id="status" required>
-            <option value="On Duty">On Duty</option>
-            <option value="Off Duty">Off Duty</option>
-            <option value="Break">Break</option>
-          </select>
-          <button type="submit">Log Status</button>
-        </form>
-        <ul id="checkinList" class="list"></ul>
-      </section>
+  <main>
+    <section class="container hero">
+      <div>
+        <h1>Reliable Transportation Today. Medical Mobility Ready for Tomorrow.</h1>
+        <p>Yellow Star Express Taxi is building a next-generation transportation model that supports daily taxi customers while expanding into Non-Emergency Medical Transportation (NEMT) for patients, families, providers, and agencies.</p>
+        <div class="badges"><span>On-Time Dispatch</span><span>Safety-First Operations</span><span>Patient-Focused Expansion</span></div>
+        <p style="margin-top:1rem"><a class="button primary" href="booking.html">Request a Ride</a> <a class="button outline" href="nemt.html">View NEMT Plan</a></p>
+      </div>
+      <aside class="hero-panel card reveal">
+        <h3 style="margin-top:0">Operational Snapshot</h3>
+        <div class="metric-grid">
+          <div class="metric"><strong>24/7</strong><span>Dispatch availability</span></div>
+          <div class="metric"><strong>100%</strong><span>Background-screened drivers</span></div>
+          <div class="metric"><strong>ADA</strong><span>Accessibility planning in progress</span></div>
+          <div class="metric"><strong>HIPAA</strong><span>Privacy-aware service model</span></div>
+        </div>
+      </aside>
+    </section>
 
-      <section class="card">
-        <h2>Shift Assignment</h2>
-        <form id="shiftForm" class="form-stack">
-          <input id="shiftStaff" type="text" placeholder="Staff name" required />
-          <input id="shiftLocation" type="text" placeholder="Site / location" required />
-          <input id="shiftStart" type="time" required />
-          <input id="shiftEnd" type="time" required />
-          <button type="submit">Assign Shift</button>
-        </form>
-        <ul id="shiftList" class="list"></ul>
-      </section>
+    <section class="section">
+      <div class="container">
+        <h2>Built for Trust, Compliance, and Growth</h2>
+        <p class="lead">The company is intentionally aligning service delivery, documentation, training, and partner communication with standards expected from a reliable NEMT transportation provider.</p>
+        <div class="grid-3">
+          <article class="feature card reveal"><h3>Safety & Driver Standards</h3><p>Defensive driving expectations, professional conduct, and rider assistance protocols keep each trip dependable and respectful.</p></article>
+          <article class="feature card reveal"><h3>Punctual Coordination</h3><p>Scheduling discipline helps support appointment attendance and reduces missed or delayed medical visits.</p></article>
+          <article class="feature card reveal"><h3>Scalable Operations</h3><p>Structured intake, communication workflows, and partner-ready processes position the business for larger transportation contracts.</p></article>
+        </div>
+        <div class="cta-strip reveal"><strong>Need transportation support now?</strong><a class="button light" href="contact.html">Speak with Dispatch</a></div>
+      </div>
+    </section>
+  </main>
 
-      <section class="card">
-        <h2>Patrol Tasks</h2>
-        <form id="patrolForm" class="form-stack">
-          <input id="patrolArea" type="text" placeholder="Patrol area" required />
-          <input id="patrolAssignee" type="text" placeholder="Assigned officer" required />
-          <input id="patrolDue" type="datetime-local" required />
-          <button type="submit">Create Patrol Task</button>
-        </form>
-        <ul id="patrolList" class="list"></ul>
-      </section>
-
-      <section class="card">
-        <h2>Incident Reporting</h2>
-        <form id="incidentForm" class="form-stack">
-          <input id="incidentLocation" type="text" placeholder="Location" required />
-          <select id="incidentSeverity" required>
-            <option value="Low">Low</option>
-            <option value="Medium">Medium</option>
-            <option value="High">High</option>
-            <option value="Critical">Critical</option>
-          </select>
-          <textarea id="incidentDescription" rows="3" placeholder="Describe what happened" required></textarea>
-          <button type="submit">Report Incident</button>
-        </form>
-        <ul id="incidentList" class="list"></ul>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <button id="clearData" class="danger">Clear Local Demo Data</button>
-    </footer>
-
-    <script src="app.js"></script>
-  </body>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Yellow Star Express Taxi</strong><p>Public-facing transportation services with an intentional shift toward NEMT-level reliability and patient support.</p></div>
+      <div><strong>Quick Links</strong><ul><li><a href="services.html">Service Overview</a></li><li><a href="booking.html">Ride Request</a></li><li><a href="partners.html">Partner Programs</a></li></ul></div>
+      <div><strong>Contact</strong><p>Phone: (555) 218-9900<br/>Email: rides@yellowstarexpresstaxi.com</p></div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
 </html>
