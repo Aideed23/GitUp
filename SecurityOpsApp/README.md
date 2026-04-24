@@ -1,38 +1,24 @@
-# SecurityOps Staff Console (Demo)
+# Yellow Star Express Taxi Website
 
-A lightweight front-end app for security companies to manage day-to-day staff operations.
+A static, multi-page public website built with only HTML, CSS, and JavaScript.
 
-## Features
-- Staff check-in/check-out log.
-- Shift assignment by officer, location, and time.
-- Patrol task creation with due dates.
-- Incident reporting with severity and details.
-- Local persistence using browser `localStorage`.
+## Files
+- `index.html`
+- `about.html`
+- `services.html`
+- `taxi.html`
+- `nemt.html`
+- `booking.html`
+- `partners.html`
+- `contact.html`
+- `styles.css`
+- `app.js`
 
-## Run locally (recommended)
-From the repository root:
+## Run locally
+Use any static file server and open `index.html`.
 
+Example:
 ```bash
 python3 SecurityOpsApp/server.py
 ```
-
-Or:
-
-```bash
-./SecurityOpsApp/run.sh
-```
-
-Then open:
-- `http://127.0.0.1:8080/`
-
-## Why you saw "Directory listing for /"
-That happens when a web server is started in the wrong folder (for example `/`) and no `index.html` exists there.
-
-This repo now includes `SecurityOpsApp/server.py`, which always serves the correct app directory no matter where you run it from.
-
-## Notes for production
-This is a starter demo for operations workflows. For production use, add:
-- Authentication and role-based access control.
-- Server-side API and database persistence.
-- Audit logs and immutable incident records.
-- Notification workflows (SMS/email/radio dispatch).
+Then open `http://127.0.0.1:8080/`.

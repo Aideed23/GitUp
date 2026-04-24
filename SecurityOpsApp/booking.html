@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Ride | Yellow Star Express Taxi</title>
+  <meta name="description" content="Submit a ride request for taxi transportation or medical appointment transportation with Yellow Star Express Taxi." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header"><div class="container nav-shell"><a class="brand" href="index.html"><span class="brand-mark">★</span><span class="brand-text"><strong>Yellow Star Express Taxi</strong><span>Taxi Service + NEMT Transition</span></span></a><button class="menu-toggle" data-menu-toggle aria-label="Open navigation"><span></span><span></span><span></span></button><ul class="nav-list" id="siteNav"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="taxi.html">Taxi</a></li><li><a href="nemt.html">NEMT</a></li><li><a href="booking.html">Booking</a></li><li><a href="partners.html">Partners</a></li><li><a href="contact.html">Contact</a></li></ul></div></header>
+<main class="container">
+  <section class="page-hero"><h1>Request Transportation</h1><p>Submit your trip details and a dispatcher will confirm scheduling, vehicle details, and any support requirements.</p></section>
+
+  <section class="section">
+    <article class="form-panel reveal">
+      <form id="bookingForm" novalidate>
+        <div class="form-grid">
+          <div><label for="fullName">Full Name</label><input id="fullName" name="fullName" required /></div>
+          <div><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" required /></div>
+          <div><label for="email">Email (Optional)</label><input id="email" name="email" type="email" /></div>
+          <div><label for="serviceType">Service Type</label><select id="serviceType" name="serviceType" required><option value="">Select an option</option><option>Local Taxi Ride</option><option>Medical Appointment Ride</option><option>Recurring Transportation</option></select></div>
+          <div><label for="date">Pickup Date</label><input id="date" name="date" type="date" required /></div>
+          <div><label for="time">Pickup Time</label><input id="time" name="time" type="time" required /></div>
+          <div class="full"><label for="pickup">Pickup Address</label><input id="pickup" name="pickup" required /></div>
+          <div class="full"><label for="dropoff">Drop-Off Address</label><input id="dropoff" name="dropoff" required /></div>
+          <div><label for="riderType">Rider Profile</label><select id="riderType" name="riderType"><option>General Rider</option><option>Senior Rider</option><option>Patient with Companion</option><option>Mobility-Limited Rider</option></select></div>
+          <div><label for="tripPurpose">Trip Purpose</label><select id="tripPurpose" name="tripPurpose"><option>General Transportation</option><option>Medical Appointment</option><option>Dialysis / Rehab</option><option>Discharge Ride</option></select></div>
+          <div class="full"><label for="notes">Additional Notes</label><textarea id="notes" name="notes" placeholder="Include gate codes, mobility notes, appointment time windows, or caregiver contact details."></textarea></div>
+        </div>
+        <p class="form-note">For urgent same-day transportation, call dispatch directly at (555) 218-9900.</p>
+        <button class="btn btn-primary" type="submit">Submit Request</button>
+        <p class="form-success" aria-live="polite"></p>
+      </form>
+    </article>
+  </section>
+</main>
+<footer class="site-footer"><div class="container footer-grid"><div><h4>Booking Support</h4><p>Our dispatch team confirms ride details promptly and coordinates special requirements when needed.</p></div><div><h4>Related</h4><ul><li><a href="services.html">Services</a></li><li><a href="nemt.html">NEMT Readiness</a></li></ul></div><div><h4>Dispatch</h4><ul><li>(555) 218-9900</li><li>rides@yellowstarexpresstaxi.com</li></ul></div></div><div class="container copyright">© <span data-year></span> Yellow Star Express Taxi.</div></footer>
+<script src="app.js"></script>
+</body>
+</html>
